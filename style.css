@@ -7,7 +7,7 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
-  font-style: semibold;
+  font-style: normal;
 }
 .navigation {
   display: flex;
@@ -43,12 +43,50 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   /* border: red solid 2px; */
   font-size: 18px;
 }
+.buttons{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.button_lm{
+  display: flex;
+  height: 44px;
+  padding: 0 20px;
+  background-color: #0071E3;
+  border-radius: 22px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border: none;
+  color: white;
+}
+.button_lm:hover{
+  background-color: #3188df;
+}
+.button_buy{
+  display: flex;
+  height: 44px;
+  padding: 0 20px;
+  border: solid 1px #0071E3;
+  background: none;
+  border-radius: 22px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #0071E3;
+}
+.button_buy:hover{
+  background-color: #0071E3;
+  color: white;
+}
 /* ======================================================= */
-/* I. MOBILE (Үндсэн тохиргоо: 700px хүртэл) */
+/* I. MOBILE (Үндсэн тохиргоо: 600px хүртэл) */
 /* ======================================================= */
 .m_zurag {
   display: flex;
@@ -59,17 +97,33 @@
   background-position: center center;
   background-repeat: no-repeat;
   margin-bottom: 5px;
-  align-items: end;
   justify-content: center;
 }
-.text-item {
+.text-m-start {
   font-size: 18px;
-  justify-content: end;
-  margin-bottom: 28px;
+  justify-content: center;
+
+  margin-bottom: auto;
+  margin-top: 28px;
+}
+.text-m-end {
+font-size: 18px;
+justify-content: center;
+margin-top: auto;
+margin-bottom: 28px;
+}
+.navigation_items{
+  display: none;
+}
+.gift{
+  display: none;
+}
+.airpod2{
+  display: none;
 }
 
 /* ======================================================= */
-/* II. TABLET (700px-ээс дээшлэх үед) */
+/* II. TABLET (600px-ээс дээшлэх үед) */
 /* ======================================================= */
 @media (min-width: 600px) {
   .m_zurag {
@@ -77,14 +131,21 @@
     height: 650px;
     width: 100%;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 5px;
-    align-items: start;
   }
-  .text-item {
-    font-size: 22px;
-    justify-content: start;
+  .text-t-start {
+  font-size: 22px;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-top: 28px;
+  }
+  .text-t-end {
+  font-size: 22px;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 28px;
   }
 }
 
@@ -98,10 +159,71 @@
     max-width: 1980px;
     margin-left: auto;
     margin-right: auto;
-    align-items: start;
+    min-width: 450px;
   }
-  .text-item {
-    font-size: 24px;
-    justify-content: start;
+  .text-d-start {
+  font-size: 24px;
+  justify-content: center;
+  margin-bottom: auto;
+  margin-top: 28px;
   }
+  .text-d-end {
+  font-size: 24px;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 28px;
+  }
+  .hamburger{
+    display: none;
+  }
+  .navigation_items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+    max-width: 900px;
+    flex-grow: 1;
+  }
+  .gift{
+    display: flex;
+    height: 650px;
+    background-image: var(--desktop-img);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    justify-content: center;
+    max-width: 1980px;
+
+  }
+  .width_50{
+    display: flex;
+    background-position: center;
+    width: 100%;
+    justify-content:space-between ;
+    margin: 0 5px;
+    gap: 5px;
+    
+  }
+  .airpod2{
+    display:grid;
+  }
+  /* .width_50-2{
+  
+    background-position: center;
+    width: 50%;
+    
+  } */
+
 }
+.black{
+  color: black;
+}
+.ba_white{
+  background-color: white;
+}
+.bo_white{
+  border-color: white;
+  color: white;
+}
+
