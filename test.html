@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Scroll Example</title>
+    <style>
+      /* ======================================================= */
+      /* I. ЕРӨНХИЙ ТОХИРГОО */
+      /* ======================================================= */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 50px 0;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* ======================================================= */
+      /* II. KEYFRAMES (Хөдөлгөөн) */
+      /* ======================================================= */
+      @keyframes infiniteScroll {
+        0% {
+          transform: translateX(0); /* Эхлэлийн байрлал */
+        }
+        /* Контентийн 50% хүртэл зүүн тийш шилжүүлнэ (давхардсан контенттой тул) */
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .scroller {
+        width: 100%; /* Жишээ нь, дэлгэцийн 90%-ийг авна */
+        max-width: 1200px;
+        overflow: hidden; /* Гүйлгэх барыг нууна */
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Hover хийхэд animation-ийг зогсооно */
+      .scroller:hover .scroller__inner {
+        animation-play-state: paused;
+      }
+
+      .scroller__inner {
+        display: flex;
+        flex-direction: row;
+        width: max-content; /* Контентээс хамаарч өргөнөө тохируулна */
+        gap: 30px; /* Item-уудын хоорондох зай */
+
+        /* Animation-ийг тохируулах: 20 секунд, жигд хурд, тасралтгүй давталт */
+        animation: infiniteScroll 20s linear infinite;
+      }
+
+      .scroll-item {
+        flex-shrink: 0; /* Item-ууд жижгэрэхгүй байх */
+        width: 150px;
+        height: 80px;
+        display: flex;
+        background-color: #e0e0e0;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroller">
+      <div class="scroller__inner">
+        <div class="scroll-item">Mac</div>
+        <div class="scroll-item">iPhone</div>
+        <div class="scroll-item">Watch</div>
+        <div class="scroll-item">AirPods</div>
+        <div class="scroll-item">iPad</div>
+        <div class="scroll-item">TV</div>
+
+        <div class="scroll-item">Mac</div>
+        <div class="scroll-item">iPhone</div>
+        <div class="scroll-item">Watch</div>
+        <div class="scroll-item">AirPods</div>
+        <div class="scroll-item">iPad</div>
+        <div class="scroll-item">TV</div>
+      </div>
+    </div>
+  </body>
+</html>
