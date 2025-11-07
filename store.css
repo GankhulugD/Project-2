@@ -7,7 +7,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  /* font-weight: weight; */
   font-style: normal;
 }
 head {
@@ -16,7 +16,7 @@ head {
 a {
   text-decoration: none;
   color: black;
-  padding-left: 10px;
+  padding-left: 15px;
 }
 a:hover {
   color: grey;
@@ -92,17 +92,23 @@ a:hover {
   background-clip: text;
   color: transparent;
 }
+.gray {
+  color: #6e6e73;
+}
 .store {
   display: flex;
   justify-content: space-between;
-  padding-left: 60px;
+  padding-left: 30px;
   margin-top: 80px;
 }
 .garchig {
-  display: flex;
+  /* display: flex;
+  flex-direction: column; */
+  gap: 20px;
 }
 .hog {
   display: none;
+  margin-right: 30px;
 }
 /* ======================================================= */
 /* I. MOBILE (Үндсэн тохиргоо: 600px хүртэл) */
@@ -116,9 +122,11 @@ a:hover {
 /* II. TABLET (600px-ээс дээшлэх үед) */
 /* ======================================================= */
 @media (min-width: 600px) {
-  .hog {
+  .hi {
+    color: #f55be4;
+  }
+  .garchig {
     display: flex;
-    flex-direction: column;
   }
 }
 
@@ -137,6 +145,10 @@ a:hover {
     max-width: 900px;
     flex-grow: 1;
   }
+  .hog {
+    display: flex;
+    flex-direction: column;
+  }
 }
 /* ====================================================== */
 @keyframes infiniteScroll {
@@ -147,6 +159,36 @@ a:hover {
   100% {
     transform: translateX(-50%);
   }
+}
+.scroller1 {
+  overflow: hidden;
+  margin-top: 50px;
+  margin-left: 30px;
+  padding-right: 30px;
+}
+/* Hover хийхэд animation-ийг зогсооно */
+.scroller1:hover .scroller__inner1 {
+  animation-play-state: paused;
+}
+.scroller__inner1 {
+  display: flex;
+  flex-direction: row;
+  width: max-content; /* Контентээс хамаарч өргөнөө тохируулна */
+  gap: 10px; /* Item-уудын хоорондох зай */
+
+  /* Animation-ийг тохируулах: 20 секунд, жигд хурд, тасралтгүй давталт */
+  /* animation: infiniteScroll 20s linear infinite; */
+}
+.scroll1-item {
+  display: grid;
+  grid-template-areas:
+    "zurag zurag zurag zurag zurag zurag zurag zurag zurag zurag zurag"
+    "text text text text text text text text text text text";
+  justify-content: center;
+  text-align: center;
+  row-gap: 16px;
+  column-gap: 5px;
+  width: fit-content;
 }
 
 /* ====================================================== */
