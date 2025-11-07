@@ -4,6 +4,12 @@
   padding: 0;
   background-color: #f5f5f7;
 }
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
 head {
   background-color: #f5f5f7;
 }
@@ -80,6 +86,24 @@ a:hover {
   margin-bottom: 5px;
   justify-content: center;
 }
+.gradient-text {
+  width: fit-content;
+  background-image: linear-gradient(to right, #019ffb, #f55be4, #fd8c1f);
+  background-clip: text;
+  color: transparent;
+}
+.store {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 60px;
+  margin-top: 80px;
+}
+.garchig {
+  display: flex;
+}
+.hog {
+  display: none;
+}
 /* ======================================================= */
 /* I. MOBILE (Үндсэн тохиргоо: 600px хүртэл) */
 /* ======================================================= */
@@ -92,6 +116,10 @@ a:hover {
 /* II. TABLET (600px-ээс дээшлэх үед) */
 /* ======================================================= */
 @media (min-width: 600px) {
+  .hog {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* ======================================================= */
@@ -122,7 +150,10 @@ a:hover {
 }
 
 /* ====================================================== */
-
+.blue {
+  color: #0066cc;
+  padding-bottom: 10px;
+}
 .footer {
   display: flex;
   background-color: #f5f5f7cc;
