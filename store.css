@@ -13,10 +13,13 @@ body {
 head {
   background-color: #f5f5f7;
 }
+.logo {
+  color: black;
+  padding-left: 15px;
+}
 a {
   text-decoration: none;
   color: black;
-  padding-left: 15px;
 }
 a:hover {
   color: grey;
@@ -95,11 +98,32 @@ a:hover {
 .gray {
   color: #6e6e73;
 }
+.font-30 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.font-44 {
+  font-size: 44px;
+  font-weight: 600;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-24 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.left-22 {
+  padding-left: 22px;
+}
+.top {
+  padding-top: 30px;
+}
 .store {
   display: flex;
   justify-content: space-between;
-  padding-left: 30px;
-  margin-top: 80px;
+  padding-left: 22px;
+  margin-top: 70px;
 }
 .garchig {
   /* display: flex;
@@ -108,7 +132,23 @@ a:hover {
 }
 .hog {
   display: none;
-  margin-right: 30px;
+  margin-right: 22px;
+}
+.find {
+  padding-top: 25px;
+  padding-left: 22px;
+}
+.scroll1-item {
+  display: grid;
+  grid-template-areas:
+    "zurag zurag zurag zurag zurag zurag zurag zurag zurag zurag zurag"
+    "text text text text text text text text text text text";
+  justify-content: center;
+  text-align: center;
+  row-gap: 16px;
+  column-gap: 5px;
+  width: fit-content;
+  margin-left: 22px;
 }
 /* ======================================================= */
 /* I. MOBILE (Үндсэн тохиргоо: 600px хүртэл) */
@@ -116,6 +156,17 @@ a:hover {
 
 .navigation_items {
   display: none;
+}
+.m_zurag {
+  display: flex;
+  background-image: var(--mobile-img);
+  width: 480px;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+  justify-content: center;
 }
 
 /* ======================================================= */
@@ -127,13 +178,20 @@ a:hover {
   }
   .garchig {
     display: flex;
+    align-items: baseline;
+  }
+  .find {
+    display: none;
+  }
+  .top {
+    padding-top: 50px;
   }
 }
 
 /* ======================================================= */
-/* II. DESKTOP (900px-ээс дээшлэх үед) */
+/* II. DESKTOP (1000px-ээс дээшлэх үед) */
 /* ======================================================= */
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .hamburger {
     display: none;
   }
@@ -148,6 +206,20 @@ a:hover {
   .hog {
     display: flex;
     flex-direction: column;
+    margin-right: 60px;
+  }
+  .store {
+    padding-left: 60px;
+    margin-top: 80px;
+  }
+  .scroll1-item {
+    margin-left: 60px;
+  }
+  .top {
+    padding-top: 65px;
+  }
+  .left-22 {
+    padding-left: 60px;
   }
 }
 /* ====================================================== */
@@ -163,8 +235,9 @@ a:hover {
 .scroller1 {
   overflow: hidden;
   margin-top: 50px;
-  margin-left: 30px;
-  padding-right: 30px;
+  /* margin-left: 22px; */
+  padding-right: 22px;
+  /* width: fit-content; */
 }
 /* Hover хийхэд animation-ийг зогсооно */
 .scroller1:hover .scroller__inner1 {
@@ -179,18 +252,6 @@ a:hover {
   /* Animation-ийг тохируулах: 20 секунд, жигд хурд, тасралтгүй давталт */
   /* animation: infiniteScroll 20s linear infinite; */
 }
-.scroll1-item {
-  display: grid;
-  grid-template-areas:
-    "zurag zurag zurag zurag zurag zurag zurag zurag zurag zurag zurag"
-    "text text text text text text text text text text text";
-  justify-content: center;
-  text-align: center;
-  row-gap: 16px;
-  column-gap: 5px;
-  width: fit-content;
-}
-
 /* ====================================================== */
 .blue {
   color: #0066cc;
