@@ -13,6 +13,10 @@ body {
 head {
   background-color: #f5f5f7;
 }
+main {
+  margin: 0;
+  padding: 0;
+}
 .logo {
   color: black;
   padding-left: 15px;
@@ -91,7 +95,7 @@ a:hover {
 }
 .gradient-text {
   width: fit-content;
-  background-image: linear-gradient(to right, #019ffb, #f55be4, #fd8c1f);
+  background-image: linear-gradient(to right, #0090f7, #ba62fc, #f2416b);
   background-clip: text;
   color: transparent;
 }
@@ -116,8 +120,8 @@ a:hover {
 .left-22 {
   padding-left: 22px;
 }
-.top-30 {
-  padding-top: 30px;
+.top-50 {
+  padding-top: 50px;
 }
 .store {
   display: flex;
@@ -152,24 +156,68 @@ a:hover {
 }
 .flex {
   display: flex;
-  gap: 20px;
+  /* gap: 20px; */
   border-radius: 18px;
   height: fit-content;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   /* margin-top: 24px; */
-  margin-left: 22px;
+  margin-left: 12px;
   overflow: hidden;
 }
 /* .flex div {
   box-shadow: 2px 4px 12px 0px #00000014;
   overflow: hidden;
 } */
-.text2 {
+.card-text {
+  font-family: "Inter", sans-serif;
+}
+.card-orange {
   margin-left: 30px;
   margin-top: 31px;
+  color: #b64400;
   font-size: 12px;
-  background: none;
+  font-weight: 700;
+}
+.card-orange2 {
+  position: absolute;
+  left: 28px;
+  bottom: 120px;
+  color: #b64400;
+  font-size: 12px;
+  font-weight: 700;
+}
+.card-name {
+  position: absolute;
+  top: 54px;
+  left: 30px;
+  font-size: 26px;
+  font-weight: 700;
+  color: black;
+}
+.card-name2 {
+  position: absolute;
+  bottom: 92px;
+  left: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+.card-price {
+  position: absolute;
+  top: 98px;
+  left: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+.card-price2 {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
 }
 /* ======================================================= */
 /* I. MOBILE (Үндсэн тохиргоо: 600px хүртэл) */
@@ -186,10 +234,31 @@ a:hover {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  justify-content: start;
+  border-radius: 18px;
+  box-shadow: 5px 5px 10px #cecece, -5px -5px 10px #ffffff;
+  position: relative;
+  /* box-shadow: 2px 4px 12px 0px #00000014; */
+  margin: 10px;
+}
+.s_zurag {
+  background-color: #ffffff;
+  height: 450px;
+  width: 313px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   justify-content: center;
   border-radius: 18px;
-  box-shadow: 2px 4px 12px 0px #00000014;
-  margin-bottom: 8px;
+  box-shadow: 5px 5px 10px #cecece, -5px -5px 10px #ffffff;
+  position: relative;
+  margin: 10px;
+}
+.img-230 {
+  position: absolute;
+  left: 41.5px;
+  right: 41.5px;
+  top: 26px;
 }
 .size {
   height: 400px;
@@ -221,7 +290,10 @@ a:hover {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    justify-content: center;
+    justify-content: start;
+  }
+  .s_zurag {
+    height: 500px;
   }
 }
 
@@ -259,7 +331,7 @@ a:hover {
     padding-left: 60px;
   }
   .flex {
-    margin-left: 60px;
+    margin-left: 50px;
   }
 }
 /* ;
@@ -276,7 +348,7 @@ a:hover {
 }
 .scroller1 {
   overflow: hidden;
-  margin-top: 50px;
+  margin-top: 14px;
   /* margin-left: 22px; */
   padding-right: 22px;
   /* width: fit-content; */
@@ -314,4 +386,8 @@ a:hover {
 }
 .footer-f {
   max-width: 1200px;
+}
+
+.width-197 {
+  max-width: 197px;
 }
