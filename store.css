@@ -2,13 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f7;
 }
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   /* font-weight: weight; */
   font-style: normal;
+  background-color: #f5f5f7;
 }
 head {
   background-color: #f5f5f7;
@@ -150,6 +150,27 @@ a:hover {
   width: fit-content;
   margin-left: 22px;
 }
+.flex {
+  display: flex;
+  gap: 20px;
+  border-radius: 18px;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 24px; */
+  margin-left: 22px;
+  overflow: hidden;
+}
+/* .flex div {
+  box-shadow: 2px 4px 12px 0px #00000014;
+  overflow: hidden;
+} */
+.text2 {
+  margin-left: 30px;
+  margin-top: 31px;
+  font-size: 12px;
+  background: none;
+}
 /* ======================================================= */
 /* I. MOBILE (Үндсэн тохиргоо: 600px хүртэл) */
 /* ======================================================= */
@@ -160,19 +181,25 @@ a:hover {
 .m_zurag {
   display: flex;
   background-image: var(--mobile-img);
-  width: 480px;
-  height: 500px;
+  width: 309px;
+  height: 450px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  margin-bottom: 5px;
   justify-content: center;
+  border-radius: 18px;
+  box-shadow: 2px 4px 12px 0px #00000014;
+  margin-bottom: 8px;
+}
+.size {
+  height: 400px;
+  width: 500px;
 }
 
 /* ======================================================= */
-/* II. TABLET (600px-ээс дээшлэх үед) */
+/* II. TABLET (650px-ээс дээшлэх үед) */
 /* ======================================================= */
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .hi {
     color: #f55be4;
   }
@@ -185,6 +212,16 @@ a:hover {
   }
   .top {
     padding-top: 50px;
+  }
+  .m_zurag {
+    display: flex;
+    background-image: var(--desktop-img);
+    width: 480px;
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    justify-content: center;
   }
 }
 
@@ -221,7 +258,12 @@ a:hover {
   .left-22 {
     padding-left: 60px;
   }
+  .flex {
+    margin-left: 60px;
+  }
 }
+/* ;
+ */
 /* ====================================================== */
 @keyframes infiniteScroll {
   0% {
@@ -238,16 +280,19 @@ a:hover {
   /* margin-left: 22px; */
   padding-right: 22px;
   /* width: fit-content; */
+  height: fit-content;
 }
 /* Hover хийхэд animation-ийг зогсооно */
-.scroller1:hover .scroller__inner1 {
-  animation-play-state: paused;
+.flex div:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.01);
 }
 .scroller__inner1 {
   display: flex;
   flex-direction: row;
   width: max-content; /* Контентээс хамаарч өргөнөө тохируулна */
   gap: 10px; /* Item-уудын хоорондох зай */
+  height: fit-content;
 
   /* Animation-ийг тохируулах: 20 секунд, жигд хурд, тасралтгүй давталт */
   /* animation: infiniteScroll 20s linear infinite; */
