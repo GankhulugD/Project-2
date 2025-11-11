@@ -243,15 +243,15 @@ a:hover {
 }
 .button_buy {
   display: flex;
-  height: 44px;
-  padding: 0 20px;
+  height: 20px;
+  padding: 0 10px;
   border: solid 1px #3a3a3a;
   background: none;
   border-radius: 22px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 8px;
   color: #3a3a3a;
 }
 .button_buy:hover {
@@ -260,9 +260,15 @@ a:hover {
 }
 .buttons {
   display: flex;
+  font-size: 8px;
   justify-content: start;
-  gap: 15px;
+  gap: 5px;
   align-items: center;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+.button-column {
+  flex-direction: row;
   margin-left: 30px;
   margin-top: 30px;
   margin-bottom: 100px;
@@ -386,8 +392,15 @@ a:hover {
   .card-price {
     font-size: 16px;
   }
-  .buttons {
+  .button_buy {
+    height: 44px;
+    font-size: 16px;
+  }
+  .button-column {
     margin-left: 60px;
+  }
+  .button-column {
+    display: flex;
   }
 }
 
