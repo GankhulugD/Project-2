@@ -454,7 +454,7 @@ a:hover {
   -webkit-overflow-scrolling: touch;
 }
 .scroller1::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 .m_zurag:hover {
   transition: all 0.3s ease;
