@@ -156,6 +156,7 @@ a:hover {
 }
 .flex {
   display: flex;
+  flex-direction: row;
   /* gap: 20px; */
   border-radius: 18px;
   height: fit-content;
@@ -164,6 +165,9 @@ a:hover {
   /* margin-top: 24px; */
   margin-left: 12px;
   overflow: hidden;
+}
+.flex div {
+  scroll-snap-align: center;
 }
 /* .flex div {
   box-shadow: 2px 4px 12px 0px #00000014;
@@ -191,23 +195,32 @@ a:hover {
   position: absolute;
   top: 54px;
   left: 30px;
-  font-size: 26px;
+  font-size: 21px;
   font-weight: 700;
   color: black;
 }
 .card-name2 {
   position: absolute;
-  bottom: 92px;
+  top: 390px;
   left: 28px;
   font-size: 18px;
   font-weight: 700;
   color: black;
 }
+.card-name3 {
+  position: absolute;
+  top: 65px;
+  left: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+  max-width: 237px;
+}
 .card-price {
   position: absolute;
   top: 98px;
   left: 30px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   color: black;
 }
@@ -219,8 +232,43 @@ a:hover {
   font-weight: 400;
   color: black;
 }
+.white {
+  color: white;
+}
+.gray {
+  color: #6e6e73;
+}
+.black {
+  color: black;
+}
+.button_buy {
+  display: flex;
+  height: 44px;
+  padding: 0 20px;
+  border: solid 1px #3a3a3a;
+  background: none;
+  border-radius: 22px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #3a3a3a;
+}
+.button_buy:hover {
+  background-color: #3a3a3a;
+  color: white;
+}
+.buttons {
+  display: flex;
+  justify-content: start;
+  gap: 15px;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
 /* ======================================================= */
-/* I. MOBILE (Үндсэн тохиргоо: 600px хүртэл) */
+/* I. MOBILE (Үндсэн тохиргоо: 650px хүртэл) */
 /* ======================================================= */
 
 .navigation_items {
@@ -240,6 +288,8 @@ a:hover {
   position: relative;
   /* box-shadow: 2px 4px 12px 0px #00000014; */
   margin: 10px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
 }
 .s_zurag {
   background-color: #ffffff;
@@ -260,9 +310,31 @@ a:hover {
   right: 41.5px;
   top: 26px;
 }
-.size {
-  height: 400px;
-  width: 500px;
+.ss-size {
+  height: 450px;
+  width: 313px;
+}
+.box {
+  width: 285px;
+  height: 215px;
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  justify-content: start;
+  border-radius: 18px;
+  box-shadow: 5px 5px 10px #cecece, -5px -5px 10px #ffffff;
+  position: relative;
+  margin: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: fit-content;
+}
+
+.container div {
+  text-align: start;
 }
 
 /* ======================================================= */
@@ -295,6 +367,28 @@ a:hover {
   .s_zurag {
     height: 500px;
   }
+  .ss-size {
+    height: 500px;
+    width: 400px;
+  }
+  .box {
+    width: 313px;
+    height: 240px;
+  }
+  .card-name {
+    font-size: 26px;
+  }
+  .card-name3 {
+    top: 81px;
+    font-size: 20px;
+    max-width: 235px;
+  }
+  .card-price {
+    font-size: 16px;
+  }
+  .buttons {
+    margin-left: 60px;
+  }
 }
 
 /* ======================================================= */
@@ -322,7 +416,7 @@ a:hover {
     margin-top: 80px;
   }
   .scroll1-item {
-    margin-left: 60px;
+    margin-left: 70px;
   }
   .top {
     padding-top: 65px;
@@ -353,9 +447,20 @@ a:hover {
   padding-right: 22px;
   /* width: fit-content; */
   height: fit-content;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
 }
-/* Hover хийхэд animation-ийг зогсооно */
-.flex div:hover {
+.scroller1::-webkit-scrollbar {
+  /* display: none; */
+}
+.m_zurag:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.01);
+}
+.s_zurag:hover {
   transition: all 0.3s ease;
   transform: scale(1.01);
 }
@@ -390,4 +495,10 @@ a:hover {
 
 .width-197 {
   max-width: 197px;
+}
+.width-326 {
+  max-width: 326px;
+}
+.width-306 {
+  max-width: 306px;
 }
