@@ -482,9 +482,20 @@ a:hover {
 .footer-f {
   max-width: 1200px;
 }
-
+.bullets {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.bullet:hover {
+  background-image: url(./apple_images/dot-b.svg);
+}
 .bullet {
-  height: 10px;
-  width: 10px;
-  background-color: gray;
+  background-image: url(./apple_images/dot.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 8px;
+  width: 8px;
 }
